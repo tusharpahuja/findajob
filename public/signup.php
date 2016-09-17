@@ -28,13 +28,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- <link href="css/bootstrap.css" rel="stylesheet" /> -->
+ 
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> 
+
 <meta charset="utf-8">
 <title>Registration</title>
 <link rel="stylesheet" href="css/signup.css" />
 </head>
 <body>
+<!-- NAVIGATION BAR -->
+ <div class="navbar navbar-inverse navbar-fixed-top">
+       
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">JobPortal</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home-sec">HOME</a></li>
+                    <li><a href="#job-search">JOB SEARCH</a></li>
+                     <li><a href="#profile">PROFILE</a></li>
+                       <li><a href="#contact-us">CONTACT US</a></li>
+                    <li><a href="#logout">LOGOUT</a></li>
+                </ul>
+            </div>
+           
+        </div>
+    </div>
+<!-- END NAVIGATION BAR -->
 <div class="signup">
-<div class="text">
+<div class="field">
 <h1 align=center><b>Registration</b></h1>
 <center>
 <form name="registration" action="signup.php" method="post">
