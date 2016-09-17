@@ -2,7 +2,7 @@
 <?php
         $DB_SERVER="localhost";
         $DB_USER="root";
-        $DB_PASS="";
+        $DB_PASS="techno2480";
         $DB_NAME="findajob";
 
     //Create a database connection
