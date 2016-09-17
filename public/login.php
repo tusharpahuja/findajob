@@ -34,7 +34,7 @@
 <title>LOGIN</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<meta name="keywords" content="Ribbon Login Form Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+<meta name="keywords" />
 <link href="css/style1.css" rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 </head>
@@ -51,7 +51,10 @@
 		</div> -->
 		<div class="clear"> </div>
 		<div class="btn">
-			<input type="submit" value="LOG IN" >
+			<input type="submit" value="LOG IN" ></input><br><br>
+
+				<span style="color: grey;">OR</span><br><br>
+			<input type="submit" value="SIGN UP"></input>
 		</div>
 		<div class="clear"> </div>
 </div>
