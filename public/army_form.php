@@ -61,7 +61,7 @@
     </div>
   </nav>
   <div class="container">
-    <p class="head">NDA - AIRFORCE</p>
+    <p class="head">NDA - ARMY</p>
   </div>
 
   <div class="container" style="color: grey;">

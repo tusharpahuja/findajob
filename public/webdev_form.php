@@ -4,7 +4,6 @@
   include("../includes/session.php");
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,38 +60,19 @@
     </div>
   </nav>
   <div class="container">
-    <p class="head">NDA - AIRFORCE</p>
+    <p class="head">IT - WEB DEVELOPMENT</p>
   </div>
 
   <div class="container" style="color: grey;">
     <form class="form-horizontal">
+    
       <div class="form-group">
-        <label class="control-label col-sm-2" for="branch">Branch:</label>
+        <label class="control-label col-sm-2" for="projects">Projects:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="branch" placeholder="Enter Branch">
+          <input type="text" class="form-control" id="projects" placeholder="Enter the minimum number of projects required">
         </div>
       </div>
       
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="PAT">PAT:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="pat" placeholder="Enter minimum Physical Assessment Test score required">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="height">Height:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="height" placeholder="Enter minimum height required">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="weight">Weight:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="weight" placeholder="Enter minimum weight required">
-        </div>
-      </div>
 
       <div class="form-group">
         <label class="col-sm-2 control-label ">Qualification:</label>

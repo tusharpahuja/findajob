@@ -1,3 +1,9 @@
+<?php
+  include("../includes/database_connection.php");
+  include("../includes/functions.php");
+  include("../includes/session.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,15 +13,6 @@
 </head>
 <body>
 <?php
-$connection = mysql_connect('localhost', 'root', '');
-if (!$connection){
- die("Database Connection Failed" . mysql_error());
-}
-$select_db = mysql_select_db('findajob');
-if (!$select_db){
- die("Database Selection Failed" . mysql_error());
-}
-session_start();
 
  if (isset($_POST['Interests'])){
  	$qualification= $_POST['Qualification'];

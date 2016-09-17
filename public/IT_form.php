@@ -5,6 +5,8 @@
 ?>
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,61 +63,37 @@
     </div>
   </nav>
   <div class="container">
-    <p class="head">NDA - AIRFORCE</p>
+    <p class="head">IT</p>
   </div>
 
   <div class="container" style="color: grey;">
     <form class="form-horizontal">
+
       <div class="form-group">
-        <label class="control-label col-sm-2" for="branch">Branch:</label>
+        <label class="control-label col-sm-2" for="company">Company:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="branch" placeholder="Enter Branch">
-        </div>
-      </div>
-      
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="PAT">PAT:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="pat" placeholder="Enter minimum Physical Assessment Test score required">
+          <input type="text" class="form-control" id="company" placeholder="Enter the name of the Company">
         </div>
       </div>
 
       <div class="form-group">
-        <label class="control-label col-sm-2" for="height">Height:</label>
+        <label class="control-label col-sm-2" for="jobtype">Jobtype:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="height" placeholder="Enter minimum height required">
+          <label class="radio-inline"><input type="radio" name="jobtype">Software Development</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Web Development</label>
         </div>
       </div>
 
       <div class="form-group">
-        <label class="control-label col-sm-2" for="weight">Weight:</label>
+        <label class="control-label col-sm-2" for="vacancies">Vacancies:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="weight" placeholder="Enter minimum weight required">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="col-sm-2 control-label ">Qualification:</label>
-        <div class="col-sm-10">
-          <select class="form-control input-sm">
-            <option value="10" name="10">10th Pass</option>
-            <option value="12" name="12">12th Pass</option>
-            <option value="UG" name="UG">UnderGraduate</option>
-            <option value="PG" name="PG">PostGraduate</option>
-          </select>
-        </div>
-      </div>
-
-       <div class="form-group">
-        <label class="control-label col-sm-2" for="salary">Salary:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="salary" placeholder="Enter salary to be provided">
+          <input type="text" class="form-control" id="vacancies" placeholder="Enter the number of vacancies">
         </div>
       </div>
 
       <div class="form-group"> 
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Next</button>
         </div>
       </div>
     </form>

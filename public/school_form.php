@@ -4,7 +4,6 @@
   include("../includes/session.php");
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,36 +60,55 @@
     </div>
   </nav>
   <div class="container">
-    <p class="head">NDA - AIRFORCE</p>
+    <p class="head">SCHOOL</p>
   </div>
 
   <div class="container" style="color: grey;">
     <form class="form-horizontal">
+
       <div class="form-group">
-        <label class="control-label col-sm-2" for="branch">Branch:</label>
+        <label class="control-label col-sm-2" for="name">Name:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="branch" placeholder="Enter Branch">
+          <input type="text" class="form-control" id="name" placeholder="Enter name of the school">
         </div>
       </div>
       
       <div class="form-group">
-        <label class="control-label col-sm-2" for="PAT">PAT:</label>
+        <label class="control-label col-sm-2" for="address">Address:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="pat" placeholder="Enter minimum Physical Assessment Test score required">
+          <input type="text" class="form-control" id="address" placeholder="Enter address of the school">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="jobtype">Jobtype:</label>
+        <div class="col-sm-10">
+          <label class="radio-inline"><input type="radio" name="jobtype">Teacher</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Receptionist</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Lab Assisstant</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Accountant</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Faculty Incharge</label>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="minage">Minimum Age:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="minage" placeholder="Enter minimum age required">
         </div>
       </div>
 
       <div class="form-group">
-        <label class="control-label col-sm-2" for="height">Height:</label>
+        <label class="control-label col-sm-2" for="maxage">Maximum Age:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="height" placeholder="Enter minimum height required">
+          <input type="text" class="form-control" id="maxage" placeholder="Enter maximum age required">
         </div>
       </div>
 
       <div class="form-group">
-        <label class="control-label col-sm-2" for="weight">Weight:</label>
+        <label class="control-label col-sm-2" for="vacancies">Vacancies:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="weight" placeholder="Enter minimum weight required">
+          <input type="text" class="form-control" id="vacancies" placeholder="Enter the number of vacancies">
         </div>
       </div>
 

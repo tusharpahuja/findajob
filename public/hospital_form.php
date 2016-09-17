@@ -61,36 +61,57 @@
     </div>
   </nav>
   <div class="container">
-    <p class="head">NDA - AIRFORCE</p>
+    <p class="head">HOSPITAL</p>
   </div>
 
   <div class="container" style="color: grey;">
     <form class="form-horizontal">
+
       <div class="form-group">
-        <label class="control-label col-sm-2" for="branch">Branch:</label>
+        <label class="control-label col-sm-2" for="name">Name:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="branch" placeholder="Enter Branch">
+          <input type="text" class="form-control" id="name" placeholder="Enter name of the hospital">
         </div>
       </div>
       
       <div class="form-group">
-        <label class="control-label col-sm-2" for="PAT">PAT:</label>
+        <label class="control-label col-sm-2" for="address">Address:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="pat" placeholder="Enter minimum Physical Assessment Test score required">
+          <input type="text" class="form-control" id="address" placeholder="Enter address of the hospital">
         </div>
       </div>
 
       <div class="form-group">
-        <label class="control-label col-sm-2" for="height">Height:</label>
+        <label class="control-label col-sm-2" for="minage">Minimum Age:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="height" placeholder="Enter minimum height required">
+          <input type="text" class="form-control" id="minage" placeholder="Enter minimum age required">
         </div>
       </div>
 
       <div class="form-group">
-        <label class="control-label col-sm-2" for="weight">Weight:</label>
+        <label class="control-label col-sm-2" for="maxage">Maximum Age:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="weight" placeholder="Enter minimum weight required">
+          <input type="text" class="form-control" id="maxage" placeholder="Enter maximum age required">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="jobtype">Jobtype:</label>
+        <div class="col-sm-10">
+          <label class="radio-inline"><input type="radio" name="jobtype">Senior Doctor</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Junior Doctor</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Pharmacist</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Nurse</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Surgeon</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Receptionist</label>
+        </div>
+      </div>
+
+    
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="vacancies">Vacancies:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="vacancies" placeholder="Enter the number of vacancies">
         </div>
       </div>
 
@@ -106,12 +127,20 @@
         </div>
       </div>
 
-       <div class="form-group">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="internships">Internships:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="internships" placeholder="Enter the minimum number of internships required">
+        </div>
+      </div>
+
+      <div class="form-group">
         <label class="control-label col-sm-2" for="salary">Salary:</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="salary" placeholder="Enter salary to be provided">
         </div>
       </div>
+
 
       <div class="form-group"> 
         <div class="col-sm-offset-2 col-sm-10">
