@@ -1,3 +1,10 @@
+<?php
+  include("../includes/database_connection.php");
+  include("../includes/functions.php");
+  include("../includes/session.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,8 +107,7 @@
         </div>
       </div>
 
-      
-
+    
       <div class="form-group">
         <label class="control-label col-sm-2" for="vacancies">Vacancies:</label>
         <div class="col-sm-10">
@@ -135,7 +141,6 @@
         </div>
       </div>
 
-      
 
       <div class="form-group"> 
         <div class="col-sm-offset-2 col-sm-10">

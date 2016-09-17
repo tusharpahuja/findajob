@@ -4,8 +4,6 @@
   include("../includes/session.php");
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,33 +60,19 @@
     </div>
   </nav>
   <div class="container">
-    <p class="head">BANKING - CLERK</p>
+    <p class="head">IT - WEB DEVELOPMENT</p>
   </div>
 
   <div class="container" style="color: grey;">
     <form class="form-horizontal">
-
-
+    
       <div class="form-group">
-        <label class="control-label col-sm-2" for="minage">Minimum Age:</label>
+        <label class="control-label col-sm-2" for="projects">Projects:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="minage" placeholder="Enter minimum age required">
+          <input type="text" class="form-control" id="projects" placeholder="Enter the minimum number of projects required">
         </div>
       </div>
-
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="maxage">Maximum Age:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="maxage" placeholder="Enter maximum age required">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="vacancies">Vacancies:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="vacancies" placeholder="Enter the number of vacancies">
-        </div>
-      </div>
+      
 
       <div class="form-group">
         <label class="col-sm-2 control-label ">Qualification:</label>
@@ -102,17 +86,10 @@
         </div>
       </div>
 
-      <div class="form-group">
+       <div class="form-group">
         <label class="control-label col-sm-2" for="salary">Salary:</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="salary" placeholder="Enter salary to be provided">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="ibpsexam">IBPS Exam:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="ibpsexam" placeholder="Enter IBPS Exam score required">
         </div>
       </div>
 

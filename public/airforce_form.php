@@ -1,3 +1,10 @@
+<?php
+  include("../includes/database_connection.php");
+  include("../includes/functions.php");
+  include("../includes/session.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +61,7 @@
     </div>
   </nav>
   <div class="container">
-    <p class="head">AIRFORCE</p>
+    <p class="head">NDA - AIRFORCE</p>
   </div>
 
   <div class="container" style="color: grey;">

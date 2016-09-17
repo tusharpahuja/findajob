@@ -1,15 +1,11 @@
 <?php
+  include("../includes/database_connection.php");
+  include("../includes/functions.php");
+  include("../includes/session.php");
+?>
 
-	$connection = mysql_connect('localhost', 'root', '');
-	if (!$connection){
-	 die("Database Connection Failed" . mysql_error());
-	}
-	$select_db = mysql_select_db('Travelfreak');
-	if (!$select_db){
-	 die("Database Selection Failed" . mysql_error());
-	}
-	 //require('db.php');
-	 session_start();
+<?php
+
 	 // If form submitted, insert values into the database.
 	 if (isset($_POST['username']))
 	 {

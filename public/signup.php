@@ -1,13 +1,10 @@
 <?php
-$connection = mysql_connect('localhost', 'root', 'techno2480');
-if (!$connection){
- die("Database Connection Failed" . mysql_error());
-}
+  include("../includes/database_connection.php");
+  include("../includes/functions.php");
+  include("../includes/session.php");
+?>
 
-$select_db = mysql_select_db('findajob');
-if (!$select_db){
- die("Database Selection Failed" . mysql_error());
-}
+<?php
 
  if (isset($_POST['username'])){
  	session_start();

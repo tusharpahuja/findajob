@@ -5,7 +5,6 @@
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,12 +61,11 @@
     </div>
   </nav>
   <div class="container">
-    <p class="head">BANKING - CLERK</p>
+    <p class="head">NDA</p>
   </div>
 
   <div class="container" style="color: grey;">
     <form class="form-horizontal">
-
 
       <div class="form-group">
         <label class="control-label col-sm-2" for="minage">Minimum Age:</label>
@@ -84,41 +82,24 @@
       </div>
 
       <div class="form-group">
+        <label class="control-label col-sm-2" for="jobtype">Jobtype:</label>
+        <div class="col-sm-10">
+          <label class="radio-inline"><input type="radio" name="jobtype">Airforce</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Army</label>
+          <label class="radio-inline"><input type="radio" name="jobtype">Navy</label>
+        </div>
+      </div>
+
+      <div class="form-group">
         <label class="control-label col-sm-2" for="vacancies">Vacancies:</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="vacancies" placeholder="Enter the number of vacancies">
         </div>
       </div>
 
-      <div class="form-group">
-        <label class="col-sm-2 control-label ">Qualification:</label>
-        <div class="col-sm-10">
-          <select class="form-control input-sm">
-            <option value="10" name="10">10th Pass</option>
-            <option value="12" name="12">12th Pass</option>
-            <option value="UG" name="UG">UnderGraduate</option>
-            <option value="PG" name="PG">PostGraduate</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="salary">Salary:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="salary" placeholder="Enter salary to be provided">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="ibpsexam">IBPS Exam:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="ibpsexam" placeholder="Enter IBPS Exam score required">
-        </div>
-      </div>
-
       <div class="form-group"> 
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Next</button>
         </div>
       </div>
     </form>
