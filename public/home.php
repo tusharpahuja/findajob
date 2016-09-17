@@ -4,9 +4,6 @@
   include("../includes/session.php");
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">JobPortal</a>
+                <a class="navbar-brand" href="home.php">findajob</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -163,177 +160,6 @@
     </section>
     <!--END SERVICES SECTION-->
   
-     <!-- PROFILE SECTION-->
-    <section id="profile">
-        <div class="container">
-            <div class="row g-pad-bottom">
-                <h1 class="g-pad-bottom">  <i class="fa fa-crosshairs "></i> PROFILE </h1>
-                
-                <div class="col-md-12 text-center ">
-                    <div class="col-md-4 col-sm-4">
-                        <ul class="plan">
-                             
-                            <li class="plan-head">BASIC <i class="fa fa-dot-circle-o  c-pr-i"></i> PLAN</li>
-                           
-                            <li><strong>52</strong> Emails</li>
-                            <li><strong>50 GB</strong> Space</li>
-                            <li><strong>Free</strong> Support</li>
-                             <li class="main-price">$99 <small> * only</small></li>
-                            <li class="bottom">
-                                <a href="#" class="btn btn-success btn-lg ">BUY NOW</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <ul class="plan">
-                            <li class="plan-head">MEDIUM <i class="fa fa-dot-circle-o  c-pr-i"></i> PLAN</li>
-                            
-                            <li><strong>52</strong> Emails</li>
-                            <li><strong>50 GB</strong> Space</li>
-                            <li><strong>Free</strong> Support</li>
-                            <li class="main-price">$199<small> * only</small></li>
-                            <li class="bottom">
-                                <a href="#" class="btn btn-primary btn-lg ">BUY NOW</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <ul class="plan">
-                            <li class="plan-head">VALUE <i class="fa fa-dot-circle-o  c-pr-i"></i> PLAN</li>
-                         
-                            <li><strong>52</strong> Emails</li>
-                            <li><strong>50 GB</strong> Space</li>
-                            <li><strong>Free</strong> Support</li>
-                               <li class="main-price">$299 <small> * only</small></li>
-                            <li class="bottom">
-                                <a href="#" class="btn btn-danger btn-lg">BUY NOW</a>
-                            </li>
-                        </ul>
-                    </div>
-                
-
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-    <!-- END PROFILE SECTION-->
-
-     <!-- LOGOUT SECTION-->
-   <section id="contact-us">
-       <div class="container">
-           <div class="row g-pad-bottom" >
-                 <h1 class="g-pad-bottom">  <i class="fa fa-crosshairs"></i> LOGOUT  </h1>
-    
-                <div class="col-md-10 col-md-offset-1 col-sm-12" >
-                    <ul class="portfolio-items col-3">
-                        <li class="portfolio-item">
-                            <div class="item-main">
-                                <div class="portfolio-image">
-                                    <img src="assets/img/portfolio/thumb/t1.png" alt="">
-                                    <div class="overlay">
-                                        <a class="preview btn btn-danger" title="Image Title Here" href="assets/img/portfolio/big/b1.png"><i class=" fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <h5>Lorem ipsum dolor sit amet</h5>
-                            </div>
-                        </li>
-                       
-                        <li class="portfolio-item">
-                            <div class="item-main">
-                                <div class="portfolio-image">
-                                    <img src="assets/img/portfolio/thumb/t2.png" alt="">
-                                    <div class="overlay">
-                                        <a class="preview btn btn-danger" title="Image Title Here" href="assets/img/portfolio/big/b2.png"><i class=" fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <h5>Lorem ipsum dolor sit amet</h5>
-                            </div>
-                        </li>
-                        <li class="portfolio-item">
-                            <div class="item-main">
-                                <div class="portfolio-image">
-                                    <img src="assets/img/portfolio/thumb/t3.png" alt="">
-                                    <div class="overlay">
-                                        <a class="preview btn btn-danger" title="Image Title Here" href="assets/img/portfolio/big/b3.png"><i class=" fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <h5>Lorem ipsum dolor sit amet</h5>
-                            </div>
-                        </li>
-                        <li class="portfolio-item">
-                            <div class="item-main">
-                                <div class="portfolio-image">
-                                    <img src="assets/img/portfolio/thumb/t4.png" alt="">
-                                    <div class="overlay">
-                                        <a class="preview btn btn-danger" title="Image Title Here" href="assets/img/portfolio/big/b4.png"><i class=" fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <h5>Lorem ipsum dolor sit amet</h5>
-                            </div>
-                        </li>
-                        <li class="portfolio-item">
-                            <div class="item-main">
-                                <div class="portfolio-image">
-                                    <img src="assets/img/portfolio/thumb/t5.png" alt="">
-                                    <div class="overlay">
-                                        <a class="preview btn btn-danger" title="Image Title Here" href="assets/img/portfolio/big/b5.png"><i class=" fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <h5>Lorem ipsum dolor sit amet</h5>
-                            </div>
-                        </li>
-                        <li class="portfolio-item ">
-                            <div class="item-main">
-                                <div class="portfolio-image">
-                                    <img src="assets/img/portfolio/thumb/t6.png" alt="">
-                                    <div class="overlay">
-                                        <a class="preview btn btn-danger" title="Image Title Here" href="assets/img/portfolio/big/b6.png"><i class=" fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <h5>Lorem ipsum dolor sit amet</h5>
-                            </div>
-                        </li>
-                        <li class="portfolio-item ">
-                           <div class="item-main">
-                                <div class="portfolio-image">
-                                    <img src="assets/img/portfolio/thumb/t7.png" alt="">
-                                    <div class="overlay">
-                                        <a class="preview btn btn-danger" title="Image Title Here" href="assets/img/portfolio/big/b7.png"><i class=" fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <h5>Lorem ipsum dolor sit amet</h5>
-                            </div>
-                        </li>
-                        <li class="portfolio-item ">
-                           <div class="item-main">
-                                <div class="portfolio-image">
-                                    <img src="assets/img/portfolio/thumb/t8.png" alt="">
-                                    <div class="overlay">
-                                        <a class="preview btn btn-danger" title="Image Title Here" href="assets/img/portfolio/big/b8.png"><i class=" fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <h5>Lorem ipsum dolor sit amet</h5>
-                            </div>
-                        </li>
-                         <li class="portfolio-item">
-                            <div class="item-main">
-                                <div class="portfolio-image">
-                                    <img src="assets/img/portfolio/thumb/t9.png" alt="">
-                                    <div class="overlay">
-                                        <a class="preview btn btn-danger" title="Image Title Here" href="assets/img/portfolio/big/b9.png"><i class=" fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <h5>Lorem ipsum dolor sit amet</h5>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-           </div>
-       </div>
-   </section>
-     <!-- END PORTFOLIO SECTION-->
     <!--CONTACT SECTION-->
     
     <section  id="logout">

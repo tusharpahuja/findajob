@@ -16,30 +16,7 @@
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
-      color: #f5f6f7;
-    }
-    .head {
-      font: 40px Montserrat, sans-serif;
-      text-align: center;
-      color: #1E90FF;
-    }
-
-    .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
-    .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-    }
-    .a1:hover{
-      color: #FF69B4;
-    }
-  }
-</style>
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -123,5 +100,7 @@
       </div>
     </form>
   </div>
-</body>
-</html>
+
+<?php
+  include("footer.php");
+?>
