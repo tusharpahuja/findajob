@@ -11,6 +11,7 @@
   $error_in_age = "";
   $error_in_vacancies = "";
   $error_in_internships = "";
+  $error_in_jobtype = "";
   $error_in_salary = "";
   $errors =  array();
   $outputy = "";
@@ -43,7 +44,15 @@
        $error_in_age = "Maximum age can't be less than minimum age";
        array_push($errors, $error_in_age);
     }
-    $jobtype = $_POST['jobtype'];
+    
+    if(!isset($_POST['jobtype'])){
+       $error_in_jobtype = "Please select a jobtype";
+       array_push($errors, $error_in_jobtype);
+    }
+    else{
+      $jobtype = $_POST['jobtype'];  
+    }
+
     if(valid_num($_POST['vacancies'])==1){
       $vacancies = (int)$_POST['vacancies'];
     }
@@ -57,7 +66,7 @@
     }
     else{
       $error_in_internships = "Only digits allowed";
-      array_push($errors, $error_in_vacancies);
+      array_push($errors, $error_in_internships);
     }
     if(valid_num($_POST['salary'])==1){
       $salary = (int)$_POST['salary'];
@@ -180,6 +189,11 @@
         </div>
       </div>
 
+      <?php 
+        echo "<div style=\"margin-left: 15%;font-size: 80%;color: red;\">";
+        echo $error_in_jobtype; 
+        echo "</div>";
+      ?>
     
       <div class="form-group">
         <label class="control-label col-sm-2" for="vacancies">Vacancies:</label>
