@@ -26,32 +26,35 @@
  	}
 ?>
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
+<title>LOGIN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta name="keywords" content="Ribbon Login Form Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates"/>
+<link href="css/style1.css" rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<b>
-<div class="login">
-<center>
-<div class="text"> 
-	<font size="7">Login</font>
-	<form method="POST" action="login.php">
-	<table>
-	<tr><td>Username<td><input type="text" name="username"></tr><br>
-	<tr><td>Password<td><input type="password" name="password"></tr><br>
-	</table>
-	<br>
-
-	<input type="submit" name="Login" onclick="verify()"> &nbsp&nbsp&nbsp   <input type="reset" name="Reset">
-	</form>
+<h1>Welcome to FINDAJOB<span>Please login...</span></h1>
+<div class="login-box">
+		<form>
+			<input type="text" class="text" name="username" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" >
+			<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+		</form>
+		<!-- <div class="remember">
+			<a href="#"><p>Remember me</p></a>
+			<h4>Forgot your password?<a href="#">Click here.</a></h4>
+		</div> -->
+		<div class="clear"> </div>
+		<div class="btn">
+			<input type="submit" value="LOG IN" >
+		</div>
+		<div class="clear"> </div>
 </div>
-</center>
-</div>
-</b>
-
+	
 </body>
 </html>
