@@ -58,6 +58,8 @@
 		</div>
 		<div class="clear"> </div>
 </div>
-	
+<div class="footer">
+     <p>Copyright &copy; 2016. All Rights Reserved | Design by <a href="home.php">findajob.com</a></p>
+</div>
 </body>
 </html>
