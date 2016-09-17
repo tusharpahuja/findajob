@@ -1,13 +1,13 @@
 <?php
-include("../includes/database_connection.php");
-include("../includes/functions.php");
-include("../includes/session.php");
+	include("../includes/database_connection.php");
+	include("../includes/functions.php");
+	include("../includes/session.php");
 ?>
 
 <?php
 
 	 // If form submitted, insert values into the database.
-if (isset($_POST['username']))
+if (isset($_POST['submit']))
 {
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
@@ -19,7 +19,7 @@ if (isset($_POST['username']))
 	if($rows==1){
 		$_SESSION['username'] = $username;
 		echo "user logged in";
-	 header("Location: home.html"); // Redirect user to index.php
+	 header("Location: home.php"); // Redirect user to index.php
 	}else{
 		echo "<div class='form'><h3>Username/password is incorrect.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
 	}
@@ -50,7 +50,7 @@ if (isset($_POST['username']))
 	<div class="container">
 		<h1>Welcome to FINDAJOB<span>Please login...</span></h1>
 		<div class="login-box">
-			<form>
+			<form action="login.php" method="post">
 				<input type="text" class="text" name="username" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" >
 				<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
 			</form>
@@ -60,16 +60,16 @@ if (isset($_POST['username']))
 			</div> -->
 			<div class="clear"> </div>
 			<div class="btn">
-				<input type="submit" value="LOG IN" ></input><br><br>
+				<input type="submit" name = "submit" value="LOG IN" ></input><br><br>
 
 				<span style="color: grey;">OR</span><br><br>
-				<input type="submit" value="SIGN UP"></input>
+				<input type="submit" name = "signup" value="SIGN UP"></input>
 			</div>
 			<div class="clear"> </div>
 		</div>
 	</div>
-	<div class="container" style="color:white;margin-bottom: -100%;">
+	<!-- <div class="container" style="color:white;margin-bottom: -50px;">
 		<p>Copyright &copy; 2016. All Rights Reserved | Design by <a href="home.php">findajob.com</a></p>
-	</div>
+	</div> -->
 </body>
 </html>

@@ -1,11 +1,24 @@
 <?php
-//validation of name
+        //validation of name
         function valid_name($name)                 
         {
             global $error_in_name;
             if (!preg_match("/^[a-zA-Z ]*$/",$name)) 
             {
                 $error_in_name = "Only letters and white space allowed";
+                 return 0; 
+            }
+               
+            else
+                return 1;
+        }
+
+        function valid_num($num)                 
+        {
+            global $error_in_num;
+            if (!preg_match("/^[0-9]*$/",$num)) 
+            {
+                $error_in_num = "Only numbers allowed";
                  return 0; 
             }
                

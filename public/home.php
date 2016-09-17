@@ -180,7 +180,7 @@
                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.              
                     </p>
-                    <form>
+                    <form action="home.php" method="post">
                         <div class="row">
                             <div class="col-md-6 ">
                                 <div class="form-group">

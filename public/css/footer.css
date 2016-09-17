@@ -40,6 +40,12 @@ body {
 	color: #FF69B4;
 }
 
+.error{
+	margin-left: 20%;
+	font-size: 80%;
+	color: red;
+}
+
 .footer{
 	position: absolute;
     bottom: 0;

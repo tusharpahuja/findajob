@@ -41,7 +41,7 @@
   </div>
 
   <div class="container" style="color: grey;">
-    <form class="form-horizontal">
+    <form class="form-horizontal" action="navy_form.php" method="post">
       <div class="form-group">
         <label class="control-label col-sm-2" for="branch">Branch:</label>
         <div class="col-sm-10">

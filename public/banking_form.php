@@ -43,7 +43,7 @@
   </div>
 
   <div class="container" style="color: grey;">
-    <form class="form-horizontal">
+    <form class="form-horizontal" action="banking_form.php" method="post">
 
       <div class="form-group">
         <label class="control-label col-sm-2" for="name">Name:</label>

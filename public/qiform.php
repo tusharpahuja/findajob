@@ -19,7 +19,7 @@
  	//$Interests= $_POST['Interests'];
  	//$date=date();
 
-    $username= $_SESSION["$username"];
+    $username= $_SESSION['$username'];
 	$name= $_SESSION['$name'];
 	$gender= $_SESSION['$gender'];
 	$password= $_SESSION['$password'];
@@ -33,7 +33,7 @@
 	$age=18;
 
  $query = "INSERT INTO `user_details`(`user_id`, `name`, `email`, `password`, `username`, `qualification`, `birthday`, `street`, `city`, `PIN`, `state`, `age`, `gender`) VALUES (0,'$name','$email','$password','$username','$qualification','$dob','$street','$City','PIN','$State','$age','$gender')";
- $result = mysql_query($query);
+ $result = mysqli_query($connection,$query);
  echo "$result";
  if($result){
  	Echo "User Registred";
