@@ -22,21 +22,21 @@
       $name = $_SESSION['name'] ;
     }
     else{
-      $outputn .= "Please fill out the IT form first.";
+      $outputn .= "Please fill out the banking form first.";
       array_push($errors, $outputn);
     }
     if(isset($_SESSION['address'])){
       $address = $_SESSION['address'];
     }
     else{
-      $outputn .= "Please fill out the IT form first.";
+      $outputn .= "Please fill out the banking form first.";
       array_push($errors, $outputn);
     }
     if(isset($_SESSION['jobtype'])){
       $jobtype = $_SESSION['jobtype'];
     }
     else{
-      $outputn .= "Please fill out the IT form first.";
+      $outputn .= "Please fill out the banking form first.";
       array_push($errors, $outputn);
     }
 
@@ -49,7 +49,7 @@
       $languages = $_SESSION['languages'];
     }
     else{
-      $outputn .= "Please fill out the IT form first.";
+      $outputn .= "Please fill out the banking form first.";
       array_push($errors, $outputn);
     }
   
@@ -142,7 +142,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="home.php">home</a></li>
           <li><a href="login.php">jobs</a></li>
-          <li><a href="signup">logout</a></li>
+          <li><a href="logout.php">logout</a></li>
         </ul>
       </div>
     </div>

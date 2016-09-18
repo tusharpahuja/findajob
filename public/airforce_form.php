@@ -5,13 +5,6 @@
 ?>
 <?php
   
-  if(isset(var))
-
-
-
-
-
-
 
 ?>
 
@@ -42,7 +35,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="home.php">home</a></li>
           <li><a href="login.php">jobs</a></li>
-          <li><a href="signup">logout</a></li>
+          <li><a href="logout.php">logout</a></li>
         </ul>
       </div>
     </div>
