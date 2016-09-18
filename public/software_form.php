@@ -16,19 +16,19 @@
       $company = $_SESSION['company'] ;
     }
     else{
-      $outputn .= "Please fill out the IT form first.";
+      $outputn = "Please fill out the IT form first.";
       array_push($errors, $outputn);
     }
     if(isset($_SESSION['jobtype'])){
       $jobtype = $_SESSION['jobtype'];
     }
     else{
-      $outputn .= "Please fill out the IT form first.";
+      $outputn = "Please fill out the IT form first.";
       array_push($errors, $outputn);
     }
 
     if($jobtype == "Web Development"){
-      $outputn .= "Wrong Form !! Please fill the Web Development form";
+      $outputn = "Wrong Form !! Please fill the Web Development form";
       array_push($errors, $outputn);
     }
 
@@ -36,7 +36,7 @@
       $vacancies = $_SESSION['vacancies'];
     }
     else{
-      $outputn .= "Please fill out the IT form first.";
+      $outputn = "Please fill out the IT form first.";
       array_push($errors, $outputn);
     }
    
@@ -65,10 +65,10 @@
       
       $result2 = mysqli_query($connection,$query2);
       if($result1 && $result2){
-        $outputy .= "Form successfully submitted";
+        $outputy = "Form successfully submitted";
       }
       else{
-        $outputn .= "Sorry ! Form could not be submitted"; 
+        $outputn = "Sorry ! Form could not be submitted"; 
       }
     }
   }  
@@ -140,7 +140,7 @@
       </div>
 
        <div class="form-group">
-        <label class="control-label col-sm-2" for="salary">Salary:</label>
+        <label class="control-label col-sm-2" for="salary">Salary(INR):</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" name="salary" placeholder="Enter salary to be provided" required>
         </div>

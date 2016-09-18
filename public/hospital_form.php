@@ -80,10 +80,10 @@
       $query = "INSERT INTO hospital(name,address,job,max_age,min_age,vacancies,qualification,internship,salary) VALUES('$name','$address','$jobtype',$maxage,$minage,$vacancies,'$qualification',$internships,$salary)";
       $result = mysqli_query($connection,$query);
       if($result){
-        $outputy .= "Form successfully submitted";
+        $outputy = "Form successfully submitted";
       }
       else{
-        $outputn .= "Sorry ! Form could not be submitted"; 
+        $outputn = "Sorry ! Form could not be submitted"; 
       }
     }
   }  
@@ -134,11 +134,13 @@
           <input type="text" class="form-control" name="name" placeholder="Enter name of the hospital" required>
         </div>
       </div>
+
       <?php 
         echo "<div style=\"margin-left: 15%;font-size: 80%;color: red;\">";
         echo $error_in_name; 
         echo "</div>";
       ?>
+      
       <div class="form-group">
         <label class="control-label col-sm-2" for="address">Address:</label>
         <div class="col-sm-10">
@@ -234,7 +236,7 @@
       ?>
 
       <div class="form-group">
-        <label class="control-label col-sm-2" for="salary">Salary:</label>
+        <label class="control-label col-sm-2" for="salary">Salary(INR):</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" name="salary" placeholder="Enter salary to be provided" required>
         </div>

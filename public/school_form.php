@@ -73,10 +73,10 @@
       $query = "INSERT INTO school(name,address,job,max_age,min_age,vacancies,qualification,salary) VALUES('$name','$address','$jobtype',$maxage,$minage,$vacancies,'$qualification',$salary)";
       $result = mysqli_query($connection,$query);
       if($result){
-        $outputy .= "Form successfully submitted";
+        $outputy = "Form successfully submitted";
       }
       else{
-        $outputn .= "Sorry ! Form could not be submitted"; 
+        $outputn = "Sorry ! Form could not be submitted"; 
       }
     }
   }  
@@ -215,7 +215,7 @@
       </div>
 
        <div class="form-group">
-        <label class="control-label col-sm-2" for="salary">Salary:</label>
+        <label class="control-label col-sm-2" for="salary">Salary(INR):</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" name="salary" placeholder="Enter salary to be provided" required>
         </div>

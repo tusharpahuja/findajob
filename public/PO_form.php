@@ -22,26 +22,26 @@
       $name = $_SESSION['name'] ;
     }
     else{
-      $outputn .= "Please fill out the banking form first.";
+      $outputn = "Please fill out the banking form first.";
       array_push($errors, $outputn);
     }
     if(isset($_SESSION['address'])){
       $address = $_SESSION['address'];
     }
     else{
-      $outputn .= "Please fill out the banking form first.";
+      $outputn = "Please fill out the banking form first.";
       array_push($errors, $outputn);
     }
     if(isset($_SESSION['jobtype'])){
       $jobtype = $_SESSION['jobtype'];
     }
     else{
-      $outputn .= "Please fill out the banking form first.";
+      $outputn = "Please fill out the banking form first.";
       array_push($errors, $outputn);
     }
 
     if($jobtype == "Clerk"){
-      $outputn .= "Wrong Form !! Please fill the Clerk form";
+      $outputn = "Wrong Form !! Please fill the Clerk form";
       array_push($errors, $outputn);
     }
 
@@ -49,7 +49,7 @@
       $languages = $_SESSION['languages'];
     }
     else{
-      $outputn .= "Please fill out the banking form first.";
+      $outputn = "Please fill out the banking form first.";
       array_push($errors, $outputn);
     }
   
@@ -106,10 +106,10 @@
       $query2 = "INSERT INTO po(sno,minage,maxage,vacancies,qualification,salary,ibpsexam) VALUES($id,$minage,$maxage,$vacancies,'$qualification',$salary,$ibpsexam)";
       $result2 = mysqli_query($connection,$query2);
       if($result1 && $result2){
-        $outputy .= "Form successfully submitted";
+        $outputy = "Form successfully submitted";
       }
       else{
-        $outputn .= "Sorry ! Form could not be submitted"; 
+        $outputn = "Sorry ! Form could not be submitted"; 
       }
     }
   }  
@@ -211,7 +211,7 @@
       </div>
 
       <div class="form-group">
-        <label class="control-label col-sm-2" for="salary">Salary:</label>
+        <label class="control-label col-sm-2" for="salary">Salary(INR):</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" name="salary" placeholder="Enter salary to be provided" required>
         </div>
