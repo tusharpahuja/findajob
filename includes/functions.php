@@ -26,6 +26,19 @@
                 return 1;
         }
 
+        function find_id($table,$connection){
+
+            $query = "SELECT max(sno) FROM $table";
+            $result = mysqli_query($connection,$query);
+            $check = mysqli_num_rows($result);
+            if($result && ($check == 1)){
+                $row = mysqli_fetch_assoc($result);
+                return $row['max(sno)'];
+            }
+
+
+        }
+
         //validation of e-mail
         function valid_email($email,$connection)                
         {

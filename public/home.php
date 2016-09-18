@@ -7,13 +7,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>JOB PORTAL</title>
+     <title>FINDAJOB</title>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
     <link href="assets/css/font-awesome-animation.css" rel="stylesheet" />
     <!--<link href="assets/css/prettyPhoto.css" rel="stylesheet" />-->
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>   
+    <style type="text/css">
+    	html{
+    		position: relative;
+    	}
+    	.bottom{
+    		position: absolute;
+    		bottom: 0;
+    		background-color:#E91C1C;
+    		width: 100%;
+    		color:#fff;
+    		padding:20px 50px 20px 50px;
+    		text-align:right;
+    	}
+    	.bottom a{
+    		color: white;
+    	}
+    	.bottom a:hover{
+    		color: black;
+    	}
+    </style>
 </head>
 <body >
          <!-- NAV SECTION -->
@@ -214,11 +234,9 @@
     </section>
     <!--END CONTACT SECTION-->
 
-   
-
     <!--FOOTER SECTION -->
-    <div id="footer">
-        2016 www.findajob.com | All Rights Reserved  
+    <div class="bottom" >
+        2016 <a href="home.php">www.findajob.com</a> | All Rights Reserved  
          
     </div>
     <!-- END FOOTER SECTION -->

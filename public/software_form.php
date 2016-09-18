@@ -4,6 +4,77 @@
   include("../includes/session.php");
 ?>
 
+<?php
+  $error_in_internships = "";
+  $error_in_salary = "";
+  $errors =  array();
+  $outputy = "";
+  $outputn = "";
+  if(isset($_POST['submit'])){
+
+    if(isset($_SESSION['company'])){
+      $company = $_SESSION['company'] ;
+    }
+    else{
+      $outputn .= "Please fill out the IT form first.";
+      array_push($errors, $outputn);
+    }
+    if(isset($_SESSION['jobtype'])){
+      $jobtype = $_SESSION['jobtype'];
+    }
+    else{
+      $outputn .= "Please fill out the IT form first.";
+      array_push($errors, $outputn);
+    }
+
+    if($jobtype == "Web Development"){
+      $outputn .= "Wrong Form !! Please fill the Web Development form";
+      array_push($errors, $outputn);
+    }
+
+    if(isset($_SESSION['vacancies'])){
+      $vacancies = $_SESSION['vacancies'];
+    }
+    else{
+      $outputn .= "Please fill out the IT form first.";
+      array_push($errors, $outputn);
+    }
+   
+    $qualification = $_POST['qualification'];
+    if(valid_num($_POST['internships'])==1){
+      $internships = (int)$_POST['internships'];
+    }
+    else{
+      $error_in_internships = "Only digits allowed";
+      array_push($errors, $error_in_internships);
+    }
+    if(valid_num($_POST['salary'])==1){
+      $salary = (int)$_POST['salary'];
+    }
+    else{
+      $error_in_salary = "Only digits allowed";
+      array_push($errors, $error_in_salary);
+    }
+
+    if(empty($errors)){
+      $query1 = "INSERT INTO it(company,jobtype,vacancies) VALUES('$company','$jobtype',$vacancies)";
+      $result1 = mysqli_query($connection,$query1);
+      $id = find_id('it',$connection);
+
+      $query2 = "INSERT INTO software(sno,mininternship,qualification,salary) VALUES($id,$internships,'$qualification',$salary)";
+      
+      $result2 = mysqli_query($connection,$query2);
+      if($result1 && $result2){
+        $outputy .= "Form successfully submitted";
+      }
+      else{
+        $outputn .= "Sorry ! Form could not be submitted"; 
+      }
+    }
+  }  
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +102,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="home.php">home</a></li>
           <li><a href="login.php">jobs</a></li>
-          <li><a href="signup">logout</a></li>
+          <li><a href="logout.php">logout</a></li>
         </ul>
       </div>
     </div>
@@ -46,19 +117,24 @@
       <div class="form-group">
         <label class="control-label col-sm-2" for="internships">Internships:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="internships" placeholder="Enter the minimum number of internships required">
+          <input type="text" class="form-control" name="internships" placeholder="Enter the minimum number of internships required" required>
         </div>
       </div>
       
+      <?php 
+        echo "<div style=\"margin-left: 15%;font-size: 80%;color: red;\">";
+        echo $error_in_internships; 
+        echo "</div>";
+      ?>
 
       <div class="form-group">
         <label class="col-sm-2 control-label ">Qualification:</label>
         <div class="col-sm-10">
-          <select class="form-control input-sm">
-            <option value="10" name="10">10th Pass</option>
-            <option value="12" name="12">12th Pass</option>
-            <option value="UG" name="UG">UnderGraduate</option>
-            <option value="PG" name="PG">PostGraduate</option>
+          <select class="form-control input-sm" name="qualification">
+            <option value="10" >10th Pass</option>
+            <option value="12" >12th Pass</option>
+            <option value="UG" >UnderGraduate</option>
+            <option value="PG" >PostGraduate</option>
           </select>
         </div>
       </div>
@@ -66,15 +142,33 @@
        <div class="form-group">
         <label class="control-label col-sm-2" for="salary">Salary:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="salary" placeholder="Enter salary to be provided">
+          <input type="text" class="form-control" name="salary" placeholder="Enter salary to be provided" required>
         </div>
       </div>
 
+      <?php 
+        echo "<div style=\"margin-left: 15%;font-size: 80%;color: red;\">";
+        echo $error_in_salary; 
+        echo "</div>";
+      ?>
+
       <div class="form-group"> 
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </div>
       </div>
+
+      <?php 
+        echo "<div style=\"margin-left: 15%;font-size: 120%;color: #00FF00;\">";
+        echo $outputy; 
+        echo "</div>";
+      ?>
+      <?php 
+        echo "<div style=\"margin-left: 15%;font-size: 120%;color: red;\">";
+        echo $outputn; 
+        echo "</div>";
+      ?>
+
     </form>
   </div>
 
