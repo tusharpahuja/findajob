@@ -1,5 +1,5 @@
 <?php
-//validation of name
+        //validation of name
         function valid_name($name)                 
         {
             global $error_in_name;
@@ -11,6 +11,32 @@
                
             else
                 return 1;
+        }
+
+        function valid_num($num)                 
+        {
+            global $error_in_num;
+            if (!preg_match("/^[0-9]*$/",$num)) 
+            {
+                $error_in_num = "Only numbers allowed";
+                 return 0; 
+            }
+               
+            else
+                return 1;
+        }
+
+        function find_id($table,$connection){
+
+            $query = "SELECT max(sno) FROM $table";
+            $result = mysqli_query($connection,$query);
+            $check = mysqli_num_rows($result);
+            if($result && ($check == 1)){
+                $row = mysqli_fetch_assoc($result);
+                return $row['max(sno)'];
+            }
+
+
         }
 
         //validation of e-mail

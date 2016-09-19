@@ -56,7 +56,7 @@
                     <li><a href="#job-search">JOB SEARCH</a></li>
                      <li><a href="#profile">PROFILE</a></li>
                        <li><a href="#contact-us">CONTACT US</a></li>
-                    <li><a href="#logout">LOGOUT</a></li>
+                    <li><a href="logout.php">LOGOUT</a></li>
                 </ul>
             </div>
            

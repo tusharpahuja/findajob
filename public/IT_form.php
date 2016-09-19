@@ -4,8 +4,50 @@
   include("../includes/session.php");
 ?>
 
+<?php
+  $error_in_company = "";
+  $error_in_vacancies = "";
+  $error_in_jobtype = "";
+  $errors =  array();
+  if(isset($_POST['next'])){
+    if(valid_name($_POST['company'])==1){
+      $company = ($_POST['company']);
+    }
+    else{
+      $error_in_company = "Only letters and white space allowed";
+      array_push($errors, $error_in_company);
+    }
+    
+    if(!isset($_POST['jobtype'])){
+       $error_in_jobtype = "Please select a jobtype";
+       array_push($errors, $error_in_jobtype);
+    }
+    else{
+      $jobtype = $_POST['jobtype'];  
+    }
 
+    if(valid_num($_POST['vacancies'])==1){
+      $vacancies = (int)$_POST['vacancies'];
+    }
+    else{
+      $error_in_vacancies = "Only digits allowed";
+      array_push($errors, $error_in_vacancies);
+    }
 
+    if(empty($errors)){
+      $_SESSION['company'] = $company;
+      $_SESSION['jobtype'] = $jobtype;
+      $_SESSION['vacancies'] = $vacancies;
+      
+      if($jobtype === 'Software Development'){
+      	redirect_to("software_form.php");
+      }
+      else{
+      	redirect_to("webdev_form.php");	
+      }
+    }
+  }  
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,30 +59,7 @@
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
-      color: #f5f6f7;
-    }
-    .head {
-      font: 40px Montserrat, sans-serif;
-      text-align: center;
-      color: #1E90FF;
-    }
-
-    .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
-    .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-    }
-    .a1:hover{
-      color: #FF69B4;
-    }
-  }
-</style>
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -57,7 +76,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="home.php">home</a></li>
           <li><a href="login.php">jobs</a></li>
-          <li><a href="signup">logout</a></li>
+          <li><a href="logout.php">logout</a></li>
         </ul>
       </div>
     </div>
@@ -67,36 +86,56 @@
   </div>
 
   <div class="container" style="color: grey;">
-    <form class="form-horizontal">
+    <form class="form-horizontal" action="IT_form.php" method="post">
 
       <div class="form-group">
         <label class="control-label col-sm-2" for="company">Company:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="company" placeholder="Enter the name of the Company">
+          <input type="text" class="form-control" name="company" placeholder="Enter the name of the Company" required>
         </div>
       </div>
+
+      <?php 
+        echo "<div style=\"margin-left: 15%;font-size: 80%;color: red;\">";
+        echo $error_in_company; 
+        echo "</div>";
+      ?>
 
       <div class="form-group">
         <label class="control-label col-sm-2" for="jobtype">Jobtype:</label>
         <div class="col-sm-10">
-          <label class="radio-inline"><input type="radio" name="jobtype">Software Development</label>
-          <label class="radio-inline"><input type="radio" name="jobtype">Web Development</label>
+          <label class="radio-inline"><input type="radio" value="Software Development" name="jobtype">Software Development</label>
+          <label class="radio-inline"><input type="radio" value="Web Development" name="jobtype">Web Development</label>
         </div>
       </div>
+
+      <?php 
+        echo "<div style=\"margin-left: 15%;font-size: 80%;color: red;\">";
+        echo $error_in_jobtype; 
+        echo "</div>";
+      ?>
 
       <div class="form-group">
         <label class="control-label col-sm-2" for="vacancies">Vacancies:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="vacancies" placeholder="Enter the number of vacancies">
+          <input type="text" class="form-control" name="vacancies" placeholder="Enter the number of vacancies" required>
         </div>
       </div>
 
+      <?php 
+        echo "<div style=\"margin-left: 15%;font-size: 80%;color: red;\">";
+        echo $error_in_vacancies; 
+        echo "</div>";
+      ?>
+
       <div class="form-group"> 
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-primary">Next</button>
+          <button type="submit" class="btn btn-primary" name="next">Next</button>
         </div>
       </div>
     </form>
   </div>
-</body>
-</html>
+
+<?php
+  include("footer.php");
+?>
