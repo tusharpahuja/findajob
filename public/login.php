@@ -11,11 +11,13 @@ if (isset($_POST['submit']))
 {
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
-	echo "$password";
+	
 	 //Checking is user existing in the database or not
-	$query = "SELECT * FROM `user_info` WHERE username='$username' and password='$password'";
+	$query = "SELECT * FROM `user_details` WHERE username='$username' and password='$password'";
+
 	$result = mysql_query($query) or die(mysql_error());
 	$rows = mysql_num_rows($result);
+
 	if($rows==1){
 		$_SESSION['username'] = $username;
 		echo "user logged in";
@@ -53,18 +55,20 @@ if (isset($_POST['submit']))
 			<form action="login.php" method="post">
 				<input type="text" class="text" name="username" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" >
 				<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
-			</form>
-			<!-- <div class="remember">
-				<a href="#"><p>Remember me</p></a>
-				<h4>Forgot your password?<a href="#">Click here.</a></h4>
-			</div> -->
-			<div class="clear"> </div>
+				<div class="clear"> </div>
+				s
 			<div class="btn">
 				<input type="submit" name = "submit" value="LOG IN" ></input><br><br>
 
 				<span style="color: grey;">OR</span><br><br>
 				<input type="submit" name = "signup" value="SIGN UP"></input>
 			</div>
+			</form>
+			<!-- <div class="remember">
+				<a href="#"><p>Remember me</p></a>
+				<h4>Forgot your password?<a href="#">Click here.</a></h4>
+			</div> -->
+			
 			<div class="clear"> </div>
 		</div>
 	</div>

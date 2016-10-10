@@ -28,17 +28,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- <link href="css/bootstrap.css" rel="stylesheet" /> -->
- <!-- 
+<!-- <link href="css/bootstrap.css" rel="stylesheet" />
+ 
     <link href="assets/css/style.css" rel="stylesheet" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>  -->
-
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> 
+ -->
 <meta charset="utf-8">
 <title>Registration</title>
 <link rel="stylesheet" href="css/signup.css" />
 </head>
 <body>
-<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR --><!-- 
  <div class="navbar navbar-inverse navbar-fixed-top">
        
         <div class="container">
@@ -61,7 +61,7 @@
             </div>
            
         </div>
-    </div>
+    </div> -->
 <!-- END NAVIGATION BAR -->
 <div class="signup">
 <div class="field">
