@@ -9,7 +9,7 @@
  if (isset($_POST['username'])){
  	session_start();
  $username = $_POST['username'];
- $name = $_POST['fname']. " " .$_POST['lname'];;
+ $name = $_POST['fname']. " " .$_POST['lname'];
  $gender=$_POST['Gender'];
  $password = md5($_POST['password']);
  $email = $_POST['email'];
